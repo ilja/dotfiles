@@ -1,0 +1,22 @@
+
+"nmap <C-W>! <Plug>Kwbd
+
+" Control-q to close buffer
+" using the bufkill.vim plugin
+map <C-q> :BD<cr>
+
+" use mouse double click to open files
+let g:NERDTreeMouseMode=2
+
+
+set background=light
+
+let g:solarized_termcolors=16
+let g:solarized_termtrans=1
+let g:solarized_style="light"
+let g:solarized_contrast="normal"
+
+color solarized
+
+" guarantees that the NERDTrees for all tabs will be one and the same
+map <F2> :NERDTreeToggle \| :silent NERDTreeMirror<CR>
