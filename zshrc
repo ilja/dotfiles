@@ -21,6 +21,7 @@ plugins=(git rails ruby)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+export PATH=$PATH:$HOME/apps/android-sdk-linux_x86/tools:$HOME/apps/android-sdk-linux_x86/platform-tools
 
 # source rvm 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
