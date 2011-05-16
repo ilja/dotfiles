@@ -32,7 +32,8 @@ map <C-F> :Ack<space>
 map <C-e> :call StartTerm()<CR>
 
 " Control-/ to toggle comments
-map <C-/> <plug>NERDCommenterToggle<CR>
+map <A-/> <plug>NERDCommenterToggle<CR>
+imap <A-/> <Esc><plug>NERDCommenterToggle<CR>i
 
 " Control-][ to increase/decrease indentation
 vmap <C-]> >gv
