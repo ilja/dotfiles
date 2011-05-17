@@ -5,6 +5,9 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 export ZSH_THEME="eastwood"
 
+# Add own bin dir to path
+export PATH=$PATH:$HOME/apps/bin
+
 # Set to this to use case-sensitive completion
 # export CASE_SENSITIVE="true"
 
