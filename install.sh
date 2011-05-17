@@ -4,34 +4,34 @@
 cd;
 
 # link .vimrc
-if test -f .vimrc
+if test -f .vimrc.local
 then
-    echo "Your ~/.vimrc already exists, i'll move it to ~/.vimrc.old"
-    mv -i .vimrc .vimrc-old
+    echo "Your ~/.vimrc.local already exists, i'll move it to ~/.vimrc.local.old"
+    mv -i .vimrc.local .vimrc.local.old
 fi
-ln -s dotfiles/dotvim/vimrc .vimrc
+ln -s dotfiles/vimrc.local .vimrc.local
 
 # link .gvimrc
-if test -f .gvimrc
+if test -f .gvimrc.local
 then
-    echo "Your ~/.gvimrc already exists, i'll move it to ~/.gvimrc.old"
-    mv -i .gvimrc .gvimrc-old
+    echo "Your ~/.gvimrc.local already exists, i'll move it to ~/.gvimrc.local.old"
+    mv -i .gvimrc.local .gvimrc.local.old
 fi
-ln -s dotfiles/dotvim/gvimrc .gvimrc
+ln -s dotfiles/gvimrc.local .gvimrc.local
 
-# link .vim
-if test -d .vim
-then
-    echo "Your ~/.vim already exists, i'll move it to ~/.vim.old"
-    mv -i .vim .vim-old
+# link .janus.rake
+if test -f .janus.rake
+	then
+		echo "Your ~/.janus.rake already exists, i'll move it to ~/.janus.rake.old"
+		mv -i .janus.rake .janus.rake.old
 fi
-ln -s dotfiles/dotvim .vim
+ln -s dotfiles/janus.rake .janus.rake
 
 # link .zshrc
 if test -f .zshrc
 then
     echo "Your ~/.zshrc already exists, i'll move it to ~/.zshrc.old"
-    mv -i .zshrc .zshrc-old
+    mv -i .zshrc .zshrc.old
 fi
 ln -s dotfiles/zshrc .zshrc
 
@@ -39,7 +39,7 @@ ln -s dotfiles/zshrc .zshrc
 if test -f .aliases
 then
     echo "Your ~/.aliases already exists, i'll move it to ~/.aliases.old"
-    mv -i .aliases .aliases-old
+    mv -i .aliases .aliases.old
 fi
 ln -s dotfiles/aliases .aliases
 

@@ -24,6 +24,7 @@ plugins=(git rails ruby)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+export PATH=$PATH:$HOME/apps/android-sdk-linux_x86/tools:$HOME/apps/android-sdk-linux_x86/platform-tools
 
 # fix names in rvm
 unsetopt auto_name_dirs
