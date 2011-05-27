@@ -12,11 +12,13 @@ set guifont=Inconsolata\ 14
 
 set sessionoptions+=resize,winpos
 
-" use tabs as tabs
-"set tabstop=2
-"set shiftwidth=2
-"set softtabstop=2
-set noexpandtab
+" Whitespace stuff
+set nowrap
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set listchars=tab:▷⋅,trail:·
 
 " Control-T for CommandT
 map <C-t> :CommandT<CR>
