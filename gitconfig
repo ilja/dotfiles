@@ -1,0 +1,22 @@
+[color]
+  ui = true
+[alias]
+  lol = log --graph --all --format=format:'%C(blue)%h%C(reset) - %C(green)[%ad]%C(reset) %s %C(cyan)— %an%C(reset)%C(yellow)%d%C(reset)' --abbrev-commit --date=relative
+  lool = log --graph --all --format=format:'%C(blue)%h%C(reset) - %C(green)%aD%C(reset) %C(green)(%ar)%C(reset)%C(yellow)%d%C(reset)%n''          %s %C(cyan)— %an%C(reset)' --abbrev-commit
+  dfw = diff --color --color-words --abbrev
+  st = status -sb
+[color "branch"]
+  current = magenta reverse
+  local = magenta
+  remote = blue
+[color "diff"]
+  meta = yellow
+  frag = blue
+  old = red
+  new = green
+  commit = yellow
+  whitespace = normal black
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
