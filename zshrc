@@ -1,44 +1,41 @@
 # Path to your oh-my-zsh configuration.
-export ZSH=$HOME/.oh-my-zsh
+ZSH=$HOME/.oh-my-zsh
 
-# Set to the name theme to load.
+# Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
-export ZSH_THEME="eastwood"
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="kennethreitz"
 
-# Add own bin dir to path
-export PATH=$PATH:$HOME/apps/bin
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias gti="git"
 
 # Set to this to use case-sensitive completion
-# export CASE_SENSITIVE="true"
+# CASE_SENSITIVE="true"
 
-# Comment this out to disable weekly auto-update checks
-# export DISABLE_AUTO_UPDATE="true"
+# Comment this out to disable bi-weekly auto-update checks
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment to change how many often would you like to wait before auto-updates occur? (in days)
+# export UPDATE_ZSH_DAYS=13
 
 # Uncomment following line if you want to disable colors in ls
-# export DISABLE_LS_COLORS="true"
+# DISABLE_LS_COLORS="true"
+
+# Uncomment following line if you want to disable autosetting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment following line if you want red dots to be displayed while waiting for completion
+# COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails ruby)
+plugins=(gitfast git-remote-branch history bundler)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:$HOME/apps/android-sdk-linux_x86/tools:$HOME/apps/android-sdk-linux_x86/platform-tools
-
-# fix names in rvm
-unsetopt auto_name_dirs
-
-# fix delete key
-bindkey  "^[[3~"          delete-char
-bindkey  "^[3;5~"         delete-char
-
-# fix home and end keys
-bindkey "\eOH" beginning-of-line
-bindkey "\eOF" end-of-line
-
-# see: https://wiki.archlinux.org/index.php/Why_don't_my_Home_and_End_keys_work_in_terminals%3F
-
-# source rvm 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
+export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
