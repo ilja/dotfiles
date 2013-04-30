@@ -37,6 +37,9 @@ plugins=(gitfast git-remote-branch history)
 
 source $ZSH/oh-my-zsh.sh
 
+# Disable autocomplete
+unsetopt correct
+
 # Customize to your needs...
 export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 # Local bin
