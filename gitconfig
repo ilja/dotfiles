@@ -20,3 +20,8 @@
   added = yellow
   changed = green
   untracked = cyan
+[user]
+  name = Ilja Krijger
+  email = ilja@quittheprogram.org
+[core]
+  editor = /usr/bin/vim
