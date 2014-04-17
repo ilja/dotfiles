@@ -1,8 +1,16 @@
 [color]
   ui = true
+[merge]
+  tool = extMerge
+[mergetool "extMerge"]
+  cmd = extMerge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+  trustExitCode = false
+[user]
+  name = Ilja Krijger
+  email = ilja@quittheprogram.org
 [alias]
-  lol = log --graph --all --format=format:'%C(blue)%h%C(reset) - %C(green)[%ad]%C(reset) %s %C(cyan)— %an%C(reset)%C(yellow)%d%C(reset)' --abbrev-commit --date=relative
-  lool = log --graph --all --format=format:'%C(blue)%h%C(reset) - %C(green)%aD%C(reset) %C(green)(%ar)%C(reset)%C(yellow)%d%C(reset)%n''          %s %C(cyan)— %an%C(reset)' --abbrev-commit
+  lol = log --graph --all --format=format:'%C(blue)%h%C(reset) - %C(green)[%ad]%C(reset) %s %C(cyan)~ %an%C(reset)%C(yellow)%d%C(reset)' --abbrev-commit --date=relative
+  lool = log --graph --all --format=format:'%C(blue)%h%C(reset) - %C(green)%aD%C(reset) %C(green)(%ar)%C(reset)%C(yellow)%d%C(reset)%n''          %s %C(cyan)~ %an%C(reset)' --abbrev-commit
   dfw = diff --color --color-words --abbrev
   st = status -sb
 [color "branch"]
@@ -20,3 +28,14 @@
   added = yellow
   changed = green
   untracked = cyan
+[core]
+  editor = /usr/bin/vim
+[mergetool]
+  keepBackup = false
+[diff]
+  algorithm = patience
+[push]
+	default = simple
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f

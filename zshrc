@@ -11,6 +11,10 @@ ZSH_THEME="kennethreitz"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gti="git"
+alias rmigrate="./bin/rake db:migrate RAILS_ENV=test"
+alias migrate="bundle exec rake db:migrate"
+alias treset='RAILS_ENV=test bundle exec rake db:reset'
+alias rtags="ripper-tags -R --exclude=vendor"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -27,20 +31,26 @@ alias gti="git"
 # Uncomment following line if you want to disable autosetting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
+# Uncomment following line if you want to disable command autocorrection
+DISABLE_CORRECTION="true"
+
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(gitfast git-remote-branch history)
+plugins=(forklift gitfast git-remote-branch history rails rake z zeus emoji-clock)
 
 source $ZSH/oh-my-zsh.sh
 
+export LC_CTYPE="en_US.UTF-8"
+
 # Customize to your needs...
-export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
-# Local bin
-export PATH=$PATH:$HOME/bin
-# rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH=$HOME/.rbenv/bin:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
+
 eval "$(rbenv init -)"
+
+# Add ./bin to the front of the path (before the rbenv shims)
+export PATH="./bin:/usr/local/bin:$PATH"
+
