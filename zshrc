@@ -17,6 +17,7 @@ alias migrate="bundle exec rake db:migrate"
 alias treset='RAILS_ENV=test bundle exec rake db:reset'
 alias rtags="ripper-tags -R --exclude=vendor"
 alias locate="mdfind"
+alias guard="./bin/guard"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -55,17 +56,19 @@ source $ZSH/oh-my-zsh.sh
 export LC_CTYPE="en_US.UTF-8"
 
 # Chruby
-#source /usr/local/opt/chruby/share/chruby/chruby.sh
-#source /usr/local/opt/chruby/share/chruby/auto.sh
-#chruby 2.1
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
+chruby 2.1
 
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
 # Customize to your needs...
-export PATH=$HOME/.rbenv/bin:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
+export PATH=./bin:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 # Add ./bin to the front of the path (before the rbenv shims)
 export PATH="./bin:/usr/local/bin:$PATH"
+
+export PATH="./bin:$PATH"
 

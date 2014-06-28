@@ -1,7 +1,7 @@
 [color]
   ui = true
 [merge]
-  tool = extMerge
+  tool = p4merge
 [mergetool "extMerge"]
   cmd = extMerge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
   trustExitCode = false
@@ -32,10 +32,13 @@
   editor = /usr/bin/vim
 [mergetool]
   keepBackup = false
+  prompt = false
 [diff]
   algorithm = patience
 [push]
-	default = simple
+  default = simple
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
+[mergetool "p4merge"]
+  path = /usr/local/bin/p4merge
